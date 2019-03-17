@@ -1,0 +1,39 @@
+{
+  "name": "acme_products_sales",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "express": "^4.16.4",
+    "pg": "^7.9.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^4.4.0",
+    "reactstrap": "^7.1.0",
+    "sequelize": "^5.1.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "stage-2"
+    ]
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./server/server.js",
+    "postinstall": "./node_modules/webpack/bin/webpack.js",
+    "webpack": "webpack",
+    "webpack:dev": "npm run webpack -- --mode=development --watch",
+    "start:dev": "npm run webpack:dev & nodemon ./server/server.js --ignore src/ --ignore dist/"
+  }
+}
